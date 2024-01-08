@@ -1,0 +1,192 @@
+
+
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  * {
+  
+    &,
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  
+  }
+  
+  .site-header,
+  .site-footer {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  }
+  
+  .site-header {
+    height: 100px;
+    background-color: #e7eaed;
+  }
+  
+  .site-footer {
+      background-color: #333536;
+      height: 200px;
+      color: #fff;
+  }
+  
+  
+  .content-area {
+      display: flex;
+  }
+      
+      .site-main {
+          width: 75%;
+      }
+  
+  .sidebar-area {
+      background-color: rgb(16, 28, 97);
+      position: relative;
+      width: 300px;
+      height:20cm;
+  }
+  
+  .side-navigation {
+  
+      &.fixed {
+          position: fixed;
+          top: 0;
+          width: 290px;
+      }
+  
+      &.bottom {
+          position: absolute;
+          bottom: 0;
+          top: auto;
+          width: 290px;
+      }
+  
+      .menu {
+          padding-top: 15px;
+          list-style-type: none;
+      }
+  
+          .menu-item {
+              position: relative;
+  
+  
+              &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  width: 0;
+                  background-color: #a5bdde;
+                  transition: width .3s ease-in;
+              }
+  
+              &:hover {
+                  &:before {
+                      width: 100%;
+                  }
+              }
+  
+              a {
+                font-size: 25px;
+                color: #fff;
+                text-decoration: none;
+                position: relative;
+                display: block;
+                padding: 30px 80px;
+                margin-bottom: 20px; /* Increase this value to add more space between menu items */
+              }
+          }
+  }
+  
+
+
+
+
+
+
+
+  .container-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: start; 
+    background-color: #f0f8ff;/* Align items at the top */
+}
+
+/* Ensure the sidebar doesn't take up too much space */
+.sidebar-area {
+    width: auto; /* Or specify a fixed width */
+    height: 100vh;
+}
+
+.content-area {
+    flex: 1; /* Adjust this value as needed */
+   margin-left: -4px;
+    margin-top: -6px;
+}
+
+.main_content {
+    margin-top: 40px;
+    flex: 2;
+    margin-right: 250px; /* Adjust based on how much space you want it to take */
+    /* Remove margin-left if not needed */
+}
+
+
+
+.titre {
+    font-size: 50px; /* Adjust the font size to your preference */
+    color: rgb(7, 26, 61);
+    font-weight: bold;
+    text-align: center; /* Center the text horizontally */
+    margin-top: 40px;
+    margin-bottom: 90px;
+   
+    
+    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with your desired font */
+    /* Add any other styles you want */
+  }
+
+
+
+
+
+
+
+
+
+#customers {
+    margin-left: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 700px
+    }
+    
+    td, th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    th {
+    
+    
+    background-color: rgb(28, 27, 75);
+    color: white;
+    }
+    
+    
+    
+    
+    
+    
+    

@@ -1,0 +1,86 @@
+<head>
+  <link rel="stylesheet" href="liste.component.css" type="text/css">
+
+
+  
+
+</head>
+<body>
+
+  <div class="container-layout">
+    <div class="content-area">
+      <aside class="sidebar-area" role="complementary">
+          <nav class="side-navigation" role="navigation">
+             <ul class="menu">
+                
+               <li class="menu-item">
+                   <a href="etudiant/remplir-fiche"></a>
+               </li><!-- /.menu-item -->
+               <li class="menu-item">
+                   <a href="etudiant/remplir-fiche">Ajouter un étudiant</a>
+               </li><!-- /.menu-item -->
+                  <li class="menu-item">
+                      <a href="">Ajouter un professeur</a>
+                  </li><!-- /.menu-item -->
+
+                  <li class="menu-item">
+                    <a href="admin/evaluer-etudiant"> Ajouter information stage</a>
+                </li><!-- /.menu-item -->
+              
+                  <li class="menu-item">
+                   <a href="admin/evaluer-etudiant"> Évaluer les stages</a>
+               </li><!-- /.menu-item -->
+  
+              
+             </ul><!-- /.menu -->
+          </nav><!-- #site-navigation -->
+          <div class="container-fluid">
+  
+             <router-outlet></router-outlet>
+         </div>
+      </aside><!-- #secondary -->
+     
+    </div><!-- /.content-area -->
+
+
+   <section class="main_content">
+
+
+    <h2 class="titre"> Liste des étudiants</h2>
+
+
+<table id="customers">
+  
+    <tr>
+     
+        <th>Nom</th>
+        <th>Prénom</th>
+      
+        <th>Promotion</th>
+        <th>Fiche  de Stage</th>
+        <th>Evalution</th>
+      </tr>
+<tr>
+ 
+    <td>lamyae</td>
+     <td>Azouagh</td>
+     <td>2022</td>
+     <td><a href="prof/fiche-stage">Fiche </a></td>
+     <td><a href="prof/evaluer-etudiant">Evaluer</a></td>
+</tr>
+<tr>
+ 
+    <td>lamyae</td>
+     <td>Azouagh</td>
+     <td>2022</td>
+     <td><a href="prof/fiche-stage">Fiche</a></td>
+     <td><a href="prof/evaluer-etudiant">Evaluer</a></td>
+  
+</tr>
+
+
+</table>
+
+</section>
+</div>
+

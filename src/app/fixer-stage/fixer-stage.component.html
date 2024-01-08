@@ -1,0 +1,180 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixation des Informations de Stage</title>
+    <link rel="stylesheet" href="fixer-stage.component.css" type="text/css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000033; /* bleu pastel */
+            color: #000033; /* bleu foncé */
+            margin: 0;
+        }
+        .header {
+            background-color: #000033; /* bleu foncé */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var headerHeight = $('.site-header').innerHeight();
+            var contentHeight = $('.site-main').innerHeight();
+            var sidebarHeight = $('.side-navigation').height();
+            var sidebarBottomPos = contentHeight - sidebarHeight; 
+            var trigger = $(window).scrollTop() - headerHeight;
+
+            if ($(window).scrollTop() >= headerHeight) {
+                $('.side-navigation').addClass('fixed');
+            } else {
+                $('.side-navigation').removeClass('fixed');
+            }
+
+            if (trigger >= sidebarBottomPos) {
+                $('.side-navigation').addClass('bottom');
+            } else {
+                $('.side-navigation').removeClass('bottom');
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="layout-container" style="margin-right: 10px;">
+        <div class="content-area">
+            <aside class="sidebar-area" role="complementary">
+                <nav class="side-navigation" role="navigation">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="etudiant/remplir-fiche">Ajouter un étudiant</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="etudiant/remplir-fiche">Ajouter un professeur</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Ajouter un Stage</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="admin/evaluer-etudiant">Modifier un stage</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Consulter les stages</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="admin/competence">Modifier les compétences</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="admin/planification">Modifier les dates</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-fluid">
+                    <router-outlet></router-outlet>
+                </div>
+            </aside>
+        </div>
+
+        <section class="main_content">
+            <h2 class="titre">Fixer information stage</h2>
+            <div class="landing-page">
+                <div class="form-appointment">
+                    <div class="wpcf7" id="wpcf7-f560-p590-o1">
+                        <form method="get" action="DynamicForm.html">
+                            <fieldset>
+                                <legend>Information Stage</legend>
+                                <div class="NiceInput">
+                                    <label>Date de début du stage :</label>
+                                    <input type="date" id="startDate" required>
+                                </div>
+                                <div id="enfants" class="hidden">
+                                    <fieldset>
+                                        <legend>Compétence :</legend>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Code</td>
+                                                    <td>Libellé</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Compétance n°1</td>
+                                                    <td><input type="text" name="code-e1"></td>
+                                                    <td><input type="text" name="libelle-e1"></td>
+                                                    <td><input type="text" name="description-e1"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>
+                                            <button type="button" id="add">Ajouter une compétence</button>
+                                        </p>
+                                    </fieldset>
+                                </div>
+                                <div>
+                                    <p>
+                                        <input type="submit" id="submit" onclick="verifMail" value="Envoyer">
+                                        <input type="reset" value="Annuler">
+                                    </p>
+                                </div> 
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        function ActiverEnfants() {
+            document.getElementById("enfants").classList.toggle("hidden");
+        }
+
+        var comp_count = 2;
+        function AjoutEnfant() {
+            var codeComp = document.querySelector("[name='code-e" + (comp_count - 1) + "']").value;
+            var LibelleComp = document.querySelector("[name='libelle-e" + (comp_count - 1) + "']").value;
+            var descriptionComp = document.querySelector("[name='description-e" + (comp_count - 1) + "']").value;
+            if (codeComp.length > 0 && LibelleComp.length > 0 && descriptionComp.length > 0) {
+                var tr = document.createElement("tr");
+                var td1 = document.createElement("td");
+                tr.appendChild(td1);
+                td1.appendChild(document.createTextNode("Compétance n°" + comp_count));
+                var td2 = document.createElement("td");
+                tr.appendChild(td2);
+                var input1 = document.createElement("input");
+                input1.type = "text";
+                input1.name = "code-e" + comp_count;
+                td2.appendChild(input1);
+                var td3 = document.createElement("td");
+                tr.appendChild(td3);
+                var input2 = document.createElement("input");
+                input2.type = "text";
+                input2.name = "libelle-e" + comp_count;
+                td3.appendChild(input2);
+                var td4 = document.createElement("td");
+                tr.appendChild(td4);
+                var input3 = document.createElement("input");
+                input3.type = "text";
+                input3.name = "description-e" + comp_count;
+                td4.appendChild(input3);
+
+                var table_enfants = document.querySelector("#enfants tbody");
+                table_enfants.appendChild(tr);
+
+                comp_count++;
+            } else {
+                alert("Veuillez remplir les informations des autres compétances d'abord");
+            }
+        }
+
+        var boutonAjoutEnfant = document.getElementById("add");
+        boutonAjoutEnfant.addEventListener("click", AjoutEnfant);
+
+        var boutonEnvoyer = document.querySelector("[id=submit]");
+        boutonEnvoyer.addEventListener("click", VerifMail);
+
+        document.querySelector("#enfants tbody tr").deleteRow(-1);
+    </script>

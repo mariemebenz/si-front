@@ -1,0 +1,94 @@
+<head>
+    <link rel="stylesheet" href="etudiant-setting.component.css" type="text/css">
+
+
+    <script type="text/javascript" >
+        /*
+     * Fix sidebar at some point and remove
+     * fixed position at content bottom
+     */
+     $(window).scroll(function () {
+      var headerHeight = $('.site-header').innerHeight();
+      var contentHeight = $('.site-main').innerHeight();
+      var sidebarHeight = $('.side-navigation').height();
+      var sidebarBottomPos = contentHeight - sidebarHeight; 
+      var trigger = $(window).scrollTop() - headerHeight;
+     
+            if ($(window).scrollTop() >= headerHeight) {
+                $('.side-navigation').addClass('fixed');
+            } else {
+                $('.side-navigation').removeClass('fixed');
+            }
+     
+            if (trigger >= sidebarBottomPos) {
+                $('.side-navigation').addClass('bottom');
+            } else {
+                $('.side-navigation').removeClass('bottom');
+            }
+     });
+       </script>
+</head>
+
+
+<div class="container-layout">
+    <div class="content-area">
+        <aside class="sidebar-area" role="complementary">
+            <nav class="side-navigation" role="navigation">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="/profil-et-parametres" routerLinkActive="active">Profil & Paramètres</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/fiche-de-stage" routerLinkActive="active">Fiche de Stage</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/depot-de-stage" routerLinkActive="active">Dépôt de Stage</a>
+                    </li>
+                    <li class="menu-item">
+                        <a routerLink="/evaluation-de-stage" routerLinkActive="active">Évaluation de Stage</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container-fluid">
+                <router-outlet></router-outlet>
+            </div>
+        </aside>
+    </div><!-- /.content-area -->
+
+
+   <section class="main_content">
+    <div class="container" >
+    <h2>Paramètres du Compte</h2>
+    <!-- Formulaire de changement de mot de passe -->
+    <form id="passwordForm">
+      <div class="form-group">
+        <label for="currentPassword">Mot de passe actuel :</label>
+        <input type="password" id="currentPassword" required>
+      </div>
+      <div class="form-group">
+        <label for="newPassword">Nouveau mot de passe :</label>
+        <input type="password" id="newPassword" required>
+      </div>
+      <button type="submit" class="btn">Changer le mot de passe</button>
+    </form>
+    
+    <!-- Formulaire de mise à jour des informations de contact -->
+    <form id="contactInfoForm">
+      <h3>Informations de Contact</h3>
+      <div class="form-group">
+        <label for="email">Adresse E-mail :</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Numéro de téléphone :</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <button type="submit" class="btn">Mettre à jour</button>
+    </form>
+    
+    <!-- Bouton de déconnexion -->
+    <button class="btn btn-logout">Déconnexion</button>
+  </div>
+
+</section>
+  </div>

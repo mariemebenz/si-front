@@ -1,0 +1,169 @@
+<head>
+    <style>
+     /**
+  * More sensible default box-sizing:
+  * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+  */
+  
+  html {
+     box-sizing: border-box;
+     font-family: 'Open Sans', sans-serif;
+   }
+   
+   * {
+   
+     &,
+     &:before,
+     &:after {
+       box-sizing: inherit;
+     }
+   
+   }
+   
+   .site-header,
+   .site-footer {
+       display: flex;
+       justify-content:center;
+       align-items: center;
+   }
+   
+   .site-header {
+     height: 100px;
+     background-color: #e7eaed;
+   }
+   
+   .site-footer {
+       background-color: #333536;
+       height: 200px;
+       color: #fff;
+   }
+   
+   
+   .content-area {
+       display: flex;
+   }
+       
+       .site-main {
+           width: 75%;
+       }
+   
+   .sidebar-area {
+       background-color: #4a98d2;
+       position: relative;
+       width: 300px;
+       height:20cm;
+   }
+   
+   .side-navigation {
+   
+       &.fixed {
+           position: fixed;
+           top: 0;
+           width: 290px;
+       }
+   
+       &.bottom {
+           position: absolute;
+           bottom: 0;
+           top: auto;
+           width: 290px;
+       }
+   
+       .menu {
+           padding-top: 15px;
+           list-style-type: none;
+       }
+   
+           .menu-item {
+               position: relative;
+   
+   
+               &:before {
+                   content: '';
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   bottom: 0;
+                   width: 0;
+                   background-color: #5dbaff;
+                   transition: width .3s ease-in;
+               }
+   
+               &:hover {
+                   &:before {
+                       width: 100%;
+                   }
+               }
+   
+               a {
+                   color: #fff;
+                   text-decoration: none;
+                   position: relative;
+                   display: block;
+                   padding: 18px 50px;
+               }
+           }
+   }
+   
+    </style>
+  
+    <script type="text/javascript" >
+     /*
+  * Fix sidebar at some point and remove
+  * fixed position at content bottom
+  */
+  $(window).scroll(function () {
+   var headerHeight = $('.site-header').innerHeight();
+   var contentHeight = $('.site-main').innerHeight();
+   var sidebarHeight = $('.side-navigation').height();
+   var sidebarBottomPos = contentHeight - sidebarHeight; 
+   var trigger = $(window).scrollTop() - headerHeight;
+  
+         if ($(window).scrollTop() >= headerHeight) {
+             $('.side-navigation').addClass('fixed');
+         } else {
+             $('.side-navigation').removeClass('fixed');
+         }
+  
+         if (trigger >= sidebarBottomPos) {
+             $('.side-navigation').addClass('bottom');
+         } else {
+             $('.side-navigation').removeClass('bottom');
+         }
+  });
+    </script>
+  </head>
+  
+  
+  
+     <div class="content-area">
+       <aside class="sidebar-area" role="complementary">
+           <nav class="side-navigation" role="navigation">
+              <ul class="menu">
+                <li class="menu-item">
+                    <a href="admin/ajout-etudiant">Ajouter un étudiant</a>
+                </li><!-- /.menu-item -->
+                <li class="menu-item">
+                    <a href="admin/ajout-prof">Ajouter un professeur</a>
+                </li><!-- /.menu-item -->
+                <li class="menu-item">
+                    <a href="admin/ajout-promo">Ajouter une  promotion</a>
+                </li><!-- /.menu-item -->
+                  
+               
+                  
+                   <li class="menu-item">
+                       <a href="">Consulter les stages</a>
+                   </li><!-- /.menu-item -->
+                  
+               
+              </ul><!-- /.menu -->
+           </nav><!-- #site-navigation -->
+           <div class="container-fluid">
+   
+              <router-outlet></router-outlet>
+          </div>
+       </aside><!-- #secondary -->
+      
+     </div><!-- /.content-area -->
+  

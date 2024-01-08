@@ -1,0 +1,54 @@
+<head>
+    <link rel="stylesheet" href="encadrant.component.css" type="text/css">
+
+
+    <script type="text/javascript" >
+        /*
+     * Fix sidebar at some point and remove
+     * fixed position at content bottom
+     */
+     $(window).scroll(function () {
+      var headerHeight = $('.site-header').innerHeight();
+      var contentHeight = $('.site-main').innerHeight();
+      var sidebarHeight = $('.side-navigation').height();
+      var sidebarBottomPos = contentHeight - sidebarHeight; 
+      var trigger = $(window).scrollTop() - headerHeight;
+     
+            if ($(window).scrollTop() >= headerHeight) {
+                $('.side-navigation').addClass('fixed');
+            } else {
+                $('.side-navigation').removeClass('fixed');
+            }
+     
+            if (trigger >= sidebarBottomPos) {
+                $('.side-navigation').addClass('bottom');
+            } else {
+                $('.side-navigation').removeClass('bottom');
+            }
+     });
+       </script>
+</head>
+
+<div class="content-area">
+    <aside class="sidebar-area" role="complementary">
+        <nav class="side-navigation" role="navigation">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="encadrant/profil-et-parametres" routerLinkActive="active">Profil & Paramètres</a>
+                </li>
+                <li class="menu-item">
+                    <a href="encadrant/fiche-stage" routerLinkActive="active">Fiche de Stage</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" routerLinkActive="active">Consulter etudiant</a>
+                </li>
+                <li class="menu-item">
+                    <a routerLink="encadrant/evaluation-de-stage" routerLinkActive="active">Évaluation de Stage</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </aside>
+</div><!-- /.content-area -->

@@ -1,0 +1,96 @@
+
+<head>
+    <link rel="stylesheet" type="text/css" href="depot-rendu.component.css">
+    
+</head>
+
+<div class="container-layout">
+    <div class="content-area">
+      <aside class="sidebar-area" role="complementary">
+          <nav class="side-navigation" role="navigation">
+             <ul class="menu">
+               <li class="menu-item">
+                   <a href="etudiant/remplir-fiche">Profil & Paramètres</a>
+               </li><!-- /.menu-item -->
+               <li class="menu-item">
+                   <a href="etudiant/remplir-fiche">Fiche de Stage</a>
+               </li><!-- /.menu-item -->
+                  <li class="menu-item">
+                      <a href="">Dépôt de Stage</a>
+                  </li><!-- /.menu-item -->
+              
+                  <li class="menu-item">
+                   <a href="admin/evaluer-etudiant"> Évaluation de Stage</a>
+               </li><!-- /.menu-item -->
+  
+              
+             </ul><!-- /.menu -->
+          </nav><!-- #site-navigation -->
+          <div class="container-fluid">
+  
+             <router-outlet></router-outlet>
+         </div>
+      </aside><!-- #secondary -->
+     
+    </div><!-- /.content-area -->
+
+
+   <section class="main_content" style="margin-left: 400px;">
+
+    
+    <div class="container-wrapper">
+    <div class="upload-container">
+        <h2>Déposez votre Attestation de stage</h2>
+        <p>Veuillez télécharger votre fichier au format PDF.</p>
+        <form action="/submit-stage" method="post" enctype="multipart/form-data">
+            <div class="file-upload-wrapper">
+                <input type="file" name="ficheStage" id="input-file" class="input-file" accept=".pdf" required>
+                <label for="input-file">Choisir un fichier</label>
+                <span id="file-name">Aucun fichier choisi</span>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+    </div>
+
+
+
+
+
+    <div class="upload-container">
+        <h2>Déposez votre convention de stage</h2>
+        <p>Veuillez télécharger votre fichier au format PDF.</p>
+        <form action="/submit-stage" method="post" enctype="multipart/form-data">
+            <div class="file-upload-wrapper">
+                <input type="file" name="ficheStage" id="input-file" class="input-file" accept=".pdf" required>
+                <label for="input-file">Choisir un fichier</label>
+                <span id="file-name">Aucun fichier choisi</span>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+    </div>
+
+    <div class="upload-container">
+        <h2>Déposez votre rapport</h2>
+        <p>Veuillez télécharger votre fichier au format PDF.</p>
+        <form action="/submit-stage" method="post" enctype="multipart/form-data">
+            <div class="file-upload-wrapper">
+                <input type="file" name="ficheStage" id="input-file" class="input-file" accept=".pdf" required>
+                <label for="input-file">Choisir un fichier</label>
+                <span id="file-name">Aucun fichier choisi</span>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+    </div>
+
+    </div>
+
+
+</section>
+</div>
+
+    <script type="text/javascript">
+        document.getElementById('input-file').addEventListener('change', function() {
+            document.getElementById('file-name').textContent = this.files[0].name;
+        });
+    </script>
+

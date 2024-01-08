@@ -1,0 +1,333 @@
+ 
+  
+
+
+
+
+  .titre {
+    font-size: 50px; /* Adjust the font size to your preference */
+    color: rgb(7, 26, 61);
+    font-weight: bold;
+    
+    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with your desired font */
+    /* Add any other styles you want */
+  }
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:     #a5bdde ;/*#add8e6;*/ /* Bleu pastel */
+    color: #333333;
+   
+ 
+   
+}
+
+.group:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .landing-page {
+    width: 882px;
+    margin: 100px auto 0;  
+  }
+  
+  .landing-page *,
+  .landing-page *:before,
+  .landing-page *:after {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box; 
+  }
+  
+  .landing-page .module {
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: 4px;
+      float: left;
+      padding: 2em;
+      width: 48%;
+  }
+  
+  .landing-page .module > *:last-child,
+  .landing-page .module > *:last-child > *:last-child,
+  .landing-page .module > *:last-child > *:last-child > *:last-child {
+      margin: 0;
+      padding: 0;
+  }
+  
+  .landing-page .note {	
+      background-color: rgb(236, 248, 236);
+      border: 1px dashed;	
+      border-radius: 4px;	
+      color: rgb(100, 119, 183);
+      font-family: georgia;	
+      font-size: .9em;
+      font-style: italic;
+      margin: 20px auto;
+      padding: 2em;
+  }
+  
+  .form-appointment {
+      padding: 2em;
+      background-color: rgb(238, 239, 242);
+      border-radius: 4px;
+      border: 1px solid rgb(16, 28, 97);
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+      font-family: 'PT Sans', Arial, sans-serif;
+      margin: 20px auto;
+  }
+  
+  .form-appointment input[type=text],
+  .form-appointment input[type=email],
+  .form-appointment input[type=tel],
+  .form-appointment textarea {	
+      border: 1px solid rgb(7, 26, 61);
+      border-radius: .2em;	
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      padding: .4em 1em;
+      margin: 0 0 .8em;
+      width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
+  }
+  
+  .form-appointment input,
+  .form-appointment input,
+  .form-appointment input,
+  .form-appointment input[type=submit],
+  .form-appointment textarea {	
+      -webkit-transition: all .2s ease-in-out;
+         -moz-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+  }
+  
+  .form-appointment input[type=text]:active,
+  .form-appointment input[type=text]:focus,
+  .form-appointment input[type=email]:active,
+  .form-appointment input[type=email]:focus,
+  .form-appointment input[type=tel]:active,
+  .form-appointment input[type=tel]:focus,
+  .form-appointment textarea:active,
+  .form-appointment textarea:focus {	
+    outline: 0;
+    box-shadow: 0 0 6px rgb(98, 126, 188);
+  }
+  
+  .form-appointment textarea {
+      height: 160px;
+  }
+  
+  .form-appointment input[type=submit] {
+      background-color: #003366;
+      border: 1px solid rgb(7, 20, 58);
+      border-radius: 4px;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1.4em;
+      padding: 10px 18px;
+  }
+  
+  .form-appointment input[type=submit]:hover {
+      background-color: white;
+      color: #160c44;
+      font-weight: 800px;
+  }
+  
+  
+  #entreprise .NiceInput {
+      
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  
+  #entreprise .NiceInput label {
+    margin-bottom: 5px;
+  }
+  
+  
+  #entreprise  input {
+      border: 1px solid rgb(7, 26, 61);
+      border-radius: .2em;	
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      padding: .4em 1em;
+      margin: 0 0 .8em;
+      width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
+  }
+  
+  #prof-encadrant input {
+      border: 1px solid rgb(7, 26, 61);
+      border-radius: .2em;	
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      padding: .4em 1em;
+      margin: 0 0 .8em;
+      width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
+  }
+  
+  
+  #tuteur input {
+      border: 1px solid rgb(7, 26, 61);
+      border-radius: .2em;	
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      padding: .4em 1em;
+      margin: 0 0 .8em;
+      width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
+  }
+  
+  #i-telephone-etudiant {
+      border: 1px solid rgb(7, 26, 61);
+      border-radius: .2em;	
+      font-family: 'PT Sans', Arial, sans-serif;
+      font-size: 1.1em;
+      padding: .4em 1em;
+      margin: 0 0 .8em;
+      width: 100%;
+    box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
+  }
+  
+  .rightTab {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .rightTab label {
+    margin-bottom: 5px; /* Add some spacing between the label and the select */
+  }
+  
+  
+  legend {
+    font-family: Arial, sans-serif; /* Choose an appropriate font family */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold, if desired */
+    color: #160c44;
+     /* Text color */
+    /* You can add other text-related styles here */
+  }
+  
+  
+  
+  
+  .form-appointment .wpcf7-list-item-label {
+      color: rgb(17, 23, 39);
+  }
+  
+  span.wpcf7-list-item {
+      display: block;
+      margin-left: -.02em;
+  }
+  
+  
+  
+  
+  
+  
+
+
+.upload-container {
+    margin-top: 35px;
+    background-color: #ffffff;
+    border: 3px solid #003366; /* Bleu foncé */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+.upload-container h2 {
+    color: #003366; /* Bleu foncé */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.upload-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.input-file {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+
+
+.file-upload-wrapper label {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#file-name {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.submit-button {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #add8e6;
+    color: rgb(3, 3, 38); /* Une teinte plus foncée de bleu */
+}
+
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the containers */
+    width: 100%; /* Takes full width of the body */
+}

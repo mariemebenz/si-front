@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 0.79cm;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(197, 219, 240);
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+<table id="customers">
+  
+    <tr>
+     
+     
+        <th>Code</th>
+        <th>Libellé</th>
+        <th>Description</th>
+        
+    
+     
+      </tr>
+<tr>
+ 
+    <td><input type="text"  name="Code"></td>
+    <td><input type="text"  name="Libellé"></td>
+    <td><input type="text"     name="Description" ></td>
+   
+     
+<!--</tr>
+
+<tr *ngFor="let ligne of tab">
+  <td><input type="text" [(ngModel)]="ligne.name" name="name"></td>
+  <td><input type="text" [(ngModel)]="ligne.pname" name="pname"></td>
+  <td><input type="text" [(ngModel)]="ligne.email" name="email"></td>
+
+  <td hidden><input type="text" [(ngModel)]="ligne.pass" name="cne"></td>
+  
+
+
+</tr>-->
+</table>
+
+<button type="button" class="btn btn-outline-dark"  ><i class="fa fa-plus" aria-hidden="true"></i></button>
+
+</body>
+</html>

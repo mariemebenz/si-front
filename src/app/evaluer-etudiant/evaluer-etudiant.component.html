@@ -1,0 +1,61 @@
+
+<head>
+    <link rel="stylesheet" href="evaluer-etudiant.component.css" type="text/css">
+</head>
+<body>
+    <div class="container-layout">
+        <div class="content-area">
+            <aside class="sidebar-area" role="complementary">
+                <nav class="side-navigation" role="navigation">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="etudiant/remplir-fiche">Ajouter un étudiant</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Ajouter un professeur</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="admin/evaluer-etudiant">Ajouter information stage</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="admin/evaluer-etudiant">Évaluer les stages</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-fluid">
+                    <router-outlet></router-outlet>
+                </div>
+            </aside>
+        </div>
+
+        <section class="main_content">
+            <div class="container">
+                <div class="text">
+                    Evaluation de Stage
+                </div> 
+                <form action="#">
+                    <div class="form-row">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>La note</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data textarea">
+                            <textarea rows="8" cols="80" required></textarea>
+                            <div class="underline"></div>
+                            <label>La mention</label>
+                        </div>
+                    </div>
+                    <div class="form-row submit-btn" style="margin-left: 180px;">
+                        <div class="input-data">
+                            <div class="inner"></div>
+                            <input type="submit" value="submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+

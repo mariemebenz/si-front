@@ -1,0 +1,166 @@
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple de formulaire dynamique</title>
+    <link rel="stylesheet" href="fiche-stage.component.css" type="text/css">
+</head>
+<body>
+        
+            <h1 class="titre"> Fiche de stage</h1>
+            <div class="landing-page"  style="margin-left:12cm;
+            margin-top:-16cm;">
+                <div class="form-appointment">
+                    <div class="wpcf7" id="wpcf7-f560-p590-o1">
+                        <form method="get" action="DynamicForm.html">
+                            <fieldset>
+                                <legend>Information Etudiant</legend>
+                                <div class="NiceInput">
+                                    <label for="i-nom">Nom</label>
+                                    <input type="text" id="i-nom" name="nom" required>
+                                </div>
+                                <div class="NiceInput">
+                                    <label for="i-prenom">Prénom</label>
+                                    <input type="text" id="i-prenom" name="prenom" required>
+                                </div>
+                                <div class="NiceInput">
+                                    <label for="i-code">Code Etudiant</label>
+                                    <input type="text" id="i-code" name="code" required>
+                                </div>
+                                <div class="rightTab">
+                                    <label for="i-promotion">Année promotion</label>
+                                    <select id="most-like" name="mostLike" class="dropdown">
+                                        <option disabled selected value>Choisir l'année</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+              
+                                    </select>
+                                </div>
+                                <div class="NiceInput">
+                                    <label for="i-mail">Adresse mail</label>
+                                    <input type="email" id="i-mail" name="mail" required>
+                                </div>
+                                <div class="NiceInput">
+                                    <label for="i-telephone-etudiant">Télephone</label>
+                                    <input type="tel" id="i-telephone-etudiant" name="telephone-etudiant" required>
+                                </div>
+                            </fieldset>
+
+                            <div id="prof-encadrant" class="hidden">
+                                <fieldset>
+                                    <legend>Professeur encadrant</legend>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td></td>
+                                                <td>Nom</td>
+                                                <td>Prénom</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Professeur Encadrant</td>
+                                                <td><input type="text" name="nom-encadrant"></td>
+                                                <td><input type="text" name="prenom-encadrant"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="NiceInput">
+                                        <label for="telephone-encadrant">Télephone</label>
+                                        <input type="tel" id="telephone-encadrant" name="telephone-encadrant" required>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div id="entreprise" class="hidden">
+                                <fieldset>
+                                    <legend>Entreprise</legend>
+                                    <div class="NiceInput">
+                                        <label for="num-siret">N° Siret</label>
+                                        <input type="num-siret" id="num-siret" name="num-siret" required>
+                
+                                    </div>
+                                    
+                                    <div class="NiceInput">
+                                        <label for="juridique">Forme juridique</label>
+                                        <input type="juridique" id="juridique" name="juridique" required>
+                                    </div>
+    
+                                    <div class="NiceInput">
+                                        <label for="sociale">Raison sociale</label>
+                                        <input type="sociale" id="sociale" name="sociale" required>
+                                    </div>
+    
+                                    <div class="NiceInput">
+                                        <label for="adresse">Adresse</label>
+                                        <input type="adresse" id="adresse" name="adresse" required>
+                                    </div>
+    
+                                    <div class="NiceInput">
+                                        <label for="code-postal">Code Postal</label>
+                                        <input type="code-postal" id="code-postal" name="code-postal" required>
+                                    </div>
+    
+                                    <div class="NiceInput">
+                                        <label for="ville">Ville</label>
+                                        <input type="ville" id="ville" name="ville" required>
+                                    </div>
+    
+                                    <div class="NiceInput">
+                                        <label for="telephone-entreprise">Télephone</label>
+                                        <input type="telephone-entreprise" id="i-telephone-entreprise" name="telephone-entreprise" required>
+                                    </div>
+    
+                                    <div class="NiceInput">
+                                        <label for="Fax">Fax</label>
+                                        <input type="fax" id="i-fax" name="fax" required>
+                                    </div>
+
+                                </fieldset>
+                            </div>
+
+                            <div id="tuteur" class="hidden">
+                                <fieldset>
+                                    <legend>Tuteur</legend>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td></td>
+                                                <td>Nom</td>
+                                                <td>Prénom</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tuteur</td>
+                                                <td><input type="text" name="nom-tuteur"></td>
+                                                <td><input type="text" name="prenom-tuteur"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="NiceInput">
+                                        <label for="telephone-tuteur">Télephone</label>
+                                        <input type="tel" id="telephone-tuteur" name="telephone-tuteur" required>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <input type="submit" id="submit" value="Envoyer">
+                                    <input type="reset" value="Annuler">
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+

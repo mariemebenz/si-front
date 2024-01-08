@@ -1,0 +1,238 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  * {
+  
+    &,
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  
+  }
+  
+  .site-header,
+  .site-footer {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  }
+  
+  .site-header {
+    height: 100px;
+    background-color: #e7eaed;
+  }
+  
+  .site-footer {
+      background-color: #333536;
+      height: 200px;
+      color: #fff;
+  }
+  
+  
+  .content-area {
+      display: flex;
+  }
+      
+      .site-main {
+          width: 75%;
+      }
+  
+  .sidebar-area {
+      background-color: rgb(16, 28, 97);
+      position: relative;
+      width: 300px;
+      height:20cm;
+  }
+  
+  .side-navigation {
+  
+      &.fixed {
+          position: fixed;
+          top: 0;
+          width: 290px;
+      }
+  
+      &.bottom {
+          position: absolute;
+          bottom: 0;
+          top: auto;
+          width: 290px;
+      }
+  
+      .menu {
+          padding-top: 15px;
+          list-style-type: none;
+      }
+  
+          .menu-item {
+              position: relative;
+  
+  
+              &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  width: 0;
+                  background-color: #a5bdde;
+                  transition: width .3s ease-in;
+              }
+  
+              &:hover {
+                  &:before {
+                      width: 100%;
+                  }
+              }
+  
+              a {
+                font-size: 25px;
+                color: #fff;
+                text-decoration: none;
+                position: relative;
+                display: block;
+                padding: 30px 80px;
+                margin-bottom: 20px; /* Increase this value to add more space between menu items */
+              }
+          }
+  }
+  
+
+
+
+
+
+  .container-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: start; /* Align items at the top */
+}
+
+/* Ensure the sidebar doesn't take up too much space */
+.sidebar-area {
+    width: auto; /* Or specify a fixed width */
+    height: 100vh;
+}
+
+.content-area {
+    flex: 1; /* Adjust this value as needed */
+
+    
+}
+
+.main_content {
+   
+    margin-top: 100px;
+    flex: 2;
+    margin-right: 50px; /* Adjust based on how much space you want it to take */
+    /* Remove margin-left if not needed */
+}
+
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #add8e6; /* Pastel Blue */
+    color: #333333;
+  
+    display: flex;
+   
+    height: 100vh;
+}
+
+.upload-container {
+    background-color: #ffffff;
+    border: 3px solid #003366; /* Bleu foncé */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+.upload-container h2 {
+    color: #003366; /* Bleu foncé */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.upload-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.input-file {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+
+
+.file-upload-wrapper label {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#file-name {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.submit-button {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #add8e6;
+    color: rgb(25, 11, 56); /* Une teinte plus foncée de bleu */
+}
+
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the containers */
+    width: 100%; /* Takes full width of the body */
+}
+
+
+
+
+
+.titre {
+    font-size: 50px; /* Adjust the font size to your preference */
+    color: rgb(7, 26, 61);
+    font-weight: bold;
+   
+    margin-bottom: 40px;
+   
+    
+    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with your desired font */
+    /* Add any other styles you want */
+  }
