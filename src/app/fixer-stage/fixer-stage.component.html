@@ -5,127 +5,73 @@
     <title>Fixation des Informations de Stage</title>
     <link rel="stylesheet" href="fixer-stage.component.css" type="text/css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000033; /* bleu pastel */
-            color: #000033; /* bleu foncé */
-            margin: 0;
-        }
-        .header {
-            background-color: #000033; /* bleu foncé */
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
+      
     </style>
-    <script type="text/javascript">
-        $(window).scroll(function () {
-            var headerHeight = $('.site-header').innerHeight();
-            var contentHeight = $('.site-main').innerHeight();
-            var sidebarHeight = $('.side-navigation').height();
-            var sidebarBottomPos = contentHeight - sidebarHeight; 
-            var trigger = $(window).scrollTop() - headerHeight;
+    </head>
+   
 
-            if ($(window).scrollTop() >= headerHeight) {
-                $('.side-navigation').addClass('fixed');
-            } else {
-                $('.side-navigation').removeClass('fixed');
-            }
-
-            if (trigger >= sidebarBottomPos) {
-                $('.side-navigation').addClass('bottom');
-            } else {
-                $('.side-navigation').removeClass('bottom');
-            }
-        });
-    </script>
-</head>
-<body>
-    <div class="layout-container" style="margin-right: 10px;">
-        <div class="content-area">
-            <aside class="sidebar-area" role="complementary">
-                <nav class="side-navigation" role="navigation">
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="etudiant/remplir-fiche">Ajouter un étudiant</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="etudiant/remplir-fiche">Ajouter un professeur</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="">Ajouter un Stage</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="admin/evaluer-etudiant">Modifier un stage</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="">Consulter les stages</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="admin/competence">Modifier les compétences</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="admin/planification">Modifier les dates</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="container-fluid">
-                    <router-outlet></router-outlet>
-                </div>
-            </aside>
-        </div>
-
-        <section class="main_content">
-            <h2 class="titre">Fixer information stage</h2>
-            <div class="landing-page">
-                <div class="form-appointment">
-                    <div class="wpcf7" id="wpcf7-f560-p590-o1">
-                        <form method="get" action="DynamicForm.html">
-                            <fieldset>
-                                <legend>Information Stage</legend>
-                                <div class="NiceInput">
-                                    <label>Date de début du stage :</label>
-                                    <input type="date" id="startDate" required>
-                                </div>
-                                <div id="enfants" class="hidden">
-                                    <fieldset>
-                                        <legend>Compétence :</legend>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>Code</td>
-                                                    <td>Libellé</td>
-                                                    <td>Description</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Compétance n°1</td>
-                                                    <td><input type="text" name="code-e1"></td>
-                                                    <td><input type="text" name="libelle-e1"></td>
-                                                    <td><input type="text" name="description-e1"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p>
-                                            <button type="button" id="add">Ajouter une compétence</button>
-                                        </p>
-                                    </fieldset>
-                                </div>
-                                <div>
-                                    <p>
-                                        <input type="submit" id="submit" onclick="verifMail" value="Envoyer">
-                                        <input type="reset" value="Annuler">
-                                    </p>
-                                </div> 
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
+    <section class="main_content">
+        <h2 class="titre">Fixer information stage</h2>
+    
+        <!-- Premier Formulaire -->
+        <div class="landing-page">
+            <div class="form-appointment">
+                <form method="get" action="SubmitForm1.html">
+                    <fieldset>
+                        <legend>Information Stage - Compétance</legend>
+                        <div class="NiceInput">
+                            <label>Type de Stage :</label>
+                            <input type="text" id="typeStage1" name="typeStage" [(ngModel)]="typeStage1" required>
+                        </div>
+                        <div class="NiceInput">
+                            <label>Code de Compétence :</label>
+                            <input type="text" id="codeCompetence" name="codeCompetence" [(ngModel)]="codeComp" required>
+                        </div>
+                        <div class="NiceInput">
+                            <label>Niveau Exigé :</label>
+                            <input type="text" id="niveauExige" name="niveauExige" [(ngModel)]="nv" required>
+                        </div>
+                        <div>
+                            <p>
+                                <input class="submit-button" type="submit" (click)="saveAcquerir()" value="Envoyer ">
+                                <input type="reset" value="Annuler">
+                            </p>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
-        </section>
-    </div>
+        </div>
+    
+        <!-- Deuxième Formulaire -->
+        <div class="landing-page">
+            <div class="form-appointment">
+                <form method="get" action="SubmitForm2.html">
+                    <fieldset>
+                        <legend>Information Stage - Date</legend>
+                        <div class="NiceInput">
+                            <label>Type de Stage :</label>
+                            <input type="text" id="typeStage2" name="typeStage" [(ngModel)]="typeStage2" required>
+                        </div>
+                        <div class="NiceInput">
+                            <label>Année :</label>
+                            <input type="number" id="annee" name="annee" [(ngModel)]="annee" required>
+                        </div>
+                        <div class="NiceInput">
+                            <label>Date de Début :</label>
+                            <input type="date" id="startDate2" name="startDate" [(ngModel)]="dateDebut" required>
+                        </div>+
+                        <div>
+                            <p>
+                                <input class="submit-button" type="submit" (click)="saveAssocier()" value="Envoyer ">
+                                <input type="reset" value="Annuler">
+                            </p>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+    
 
     <script type="text/javascript">
         function ActiverEnfants() {

@@ -1,0 +1,79 @@
+
+
+.upload-container {
+    margin-left:36cm;
+    margin-top: 4cm;
+    background-color: #ffffff;
+    border: 3px solid #003366; /* Bleu foncé */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 500px;
+  
+}
+
+.upload-container h2 {
+    color: #003366; /* Bleu foncé */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.upload-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.input-file {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+
+
+.file-upload-wrapper label {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#file-name {
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.submit-button {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #add8e6;
+    color: rgb(3, 3, 38); /* Une teinte plus foncée de bleu */
+}
+
+
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the containers */
+    width: 100%; /* Takes full width of the body */
+}

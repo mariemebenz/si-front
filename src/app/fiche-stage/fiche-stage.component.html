@@ -6,161 +6,131 @@
 </head>
 <body>
         
-            <h1 class="titre"> Fiche de stage</h1>
-            <div class="landing-page"  style="margin-left:12cm;
-            margin-top:-16cm;">
-                <div class="form-appointment">
-                    <div class="wpcf7" id="wpcf7-f560-p590-o1">
-                        <form method="get" action="DynamicForm.html">
-                            <fieldset>
-                                <legend>Information Etudiant</legend>
-                                <div class="NiceInput">
-                                    <label for="i-nom">Nom</label>
-                                    <input type="text" id="i-nom" name="nom" required>
-                                </div>
-                                <div class="NiceInput">
-                                    <label for="i-prenom">Prénom</label>
-                                    <input type="text" id="i-prenom" name="prenom" required>
-                                </div>
-                                <div class="NiceInput">
-                                    <label for="i-code">Code Etudiant</label>
-                                    <input type="text" id="i-code" name="code" required>
-                                </div>
-                                <div class="rightTab">
-                                    <label for="i-promotion">Année promotion</label>
-                                    <select id="most-like" name="mostLike" class="dropdown">
-                                        <option disabled selected value>Choisir l'année</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                        <option value="2027">2027</option>
-              
-                                    </select>
-                                </div>
-                                <div class="NiceInput">
-                                    <label for="i-mail">Adresse mail</label>
-                                    <input type="email" id="i-mail" name="mail" required>
-                                </div>
-                                <div class="NiceInput">
-                                    <label for="i-telephone-etudiant">Télephone</label>
-                                    <input type="tel" id="i-telephone-etudiant" name="telephone-etudiant" required>
-                                </div>
-                            </fieldset>
-
-                            <div id="prof-encadrant" class="hidden">
-                                <fieldset>
-                                    <legend>Professeur encadrant</legend>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <td></td>
-                                                <td>Nom</td>
-                                                <td>Prénom</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Professeur Encadrant</td>
-                                                <td><input type="text" name="nom-encadrant"></td>
-                                                <td><input type="text" name="prenom-encadrant"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="NiceInput">
-                                        <label for="telephone-encadrant">Télephone</label>
-                                        <input type="tel" id="telephone-encadrant" name="telephone-encadrant" required>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                            <div id="entreprise" class="hidden">
-                                <fieldset>
-                                    <legend>Entreprise</legend>
-                                    <div class="NiceInput">
-                                        <label for="num-siret">N° Siret</label>
-                                        <input type="num-siret" id="num-siret" name="num-siret" required>
-                
-                                    </div>
-                                    
-                                    <div class="NiceInput">
-                                        <label for="juridique">Forme juridique</label>
-                                        <input type="juridique" id="juridique" name="juridique" required>
-                                    </div>
+    <h1 class="titre"> Ajouter information</h1>
+    <div class="landing-page">
+        <div class="form-appointment">
     
-                                    <div class="NiceInput">
-                                        <label for="sociale">Raison sociale</label>
-                                        <input type="sociale" id="sociale" name="sociale" required>
-                                    </div>
-    
-                                    <div class="NiceInput">
-                                        <label for="adresse">Adresse</label>
-                                        <input type="adresse" id="adresse" name="adresse" required>
-                                    </div>
-    
-                                    <div class="NiceInput">
-                                        <label for="code-postal">Code Postal</label>
-                                        <input type="code-postal" id="code-postal" name="code-postal" required>
-                                    </div>
-    
-                                    <div class="NiceInput">
-                                        <label for="ville">Ville</label>
-                                        <input type="ville" id="ville" name="ville" required>
-                                    </div>
-    
-                                    <div class="NiceInput">
-                                        <label for="telephone-entreprise">Télephone</label>
-                                        <input type="telephone-entreprise" id="i-telephone-entreprise" name="telephone-entreprise" required>
-                                    </div>
-    
-                                    <div class="NiceInput">
-                                        <label for="Fax">Fax</label>
-                                        <input type="fax" id="i-fax" name="fax" required>
-                                    </div>
-
-                                </fieldset>
-                            </div>
-
-                            <div id="tuteur" class="hidden">
-                                <fieldset>
-                                    <legend>Tuteur</legend>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <td></td>
-                                                <td>Nom</td>
-                                                <td>Prénom</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tuteur</td>
-                                                <td><input type="text" name="nom-tuteur"></td>
-                                                <td><input type="text" name="prenom-tuteur"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="NiceInput">
-                                        <label for="telephone-tuteur">Télephone</label>
-                                        <input type="tel" id="telephone-tuteur" name="telephone-tuteur" required>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                            <div>
-                                <p>
-                                    <input type="submit" id="submit" value="Envoyer">
-                                    <input type="reset" value="Annuler">
-                                </p>
-                            </div>
-                        </form>
+            <!-- entreprise form -->
+            <form method="get" action="SubmitEntreprise.html">
+                <fieldset>
+                    <legend>Entreprise</legend>
+                    <div class="NiceInput">
+                        <label for="num-siret">Numéro Siret:</label>
+                        <input type="text" id="num-siret" name="num_siret"  [(ngModel)]="numSiret"  required maxlength="20">
                     </div>
+                    <div class="NiceInput">
+                        <label for="forme-juridique">Forme Juridique:</label>
+                        <input type="text" id="forme-juridique" name="forme_juridique"   [(ngModel)]="formeJuridique" required maxlength="20">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="raison-sociale">Raison Sociale:</label>
+                        <input type="text" id="raison-sociale" name="raison_sociale"   [(ngModel)]="raisonSociale"  required maxlength="20">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="adresse">Adresse:</label>
+                        <input type="text" id="adresse" name="adresse"   [(ngModel)]="adresse" required maxlength="50">
+                    </div>
+                   
+                    <div class="NiceInput">
+                        <label for="ville">Ville:</label>
+                        <input type="text" id="ville" name="ville"   [(ngModel)]="ville" required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="telephone">Téléphone:</label>
+                        <input type="tel" id="telephone" name="telephone"   [(ngModel)]="telephone" required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="fax">Fax:</label>
+                        <input type="text" id="fax" name="fax"   [(ngModel)]="fax" required maxlength="10">
+                    </div>
+                    
+                    
+                </fieldset>
+                <div>
+                    <input type="submit"(click)="saveEntreprise()" value="Envoyer Entreprise">
                 </div>
-            </div>
+            </form>
+    
+            <!-- Tuteur form -->
+            <form method="get" action="SubmitTuteur.html" class="hidden" id="Tuteur">
+                <fieldset>
+                    <legend>Tuteur</legend>
+                    <div class="NiceInput">
+                        <label for="num-tuteur">Numéro Tuteur:</label>
+                        <input type="text" id="num-tuteur" name="num_tuteur"   [(ngModel)]="numTuteur" required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="nom-tuteur">Nom:</label>
+                        <input type="text" id="nom-tuteur" name="nom_tuteur"  [(ngModel)]="nom"  required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="prenom-tuteur">Prénom:</label>
+                        <input type="text" id="prenom-tuteur" name="prenom_tuteur"   [(ngModel)]=" prenom" required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="telephone-tuteur">Téléphone:</label>
+                        <input type="tel" id="telephone-tuteur" name="telephone_tuteur"   [(ngModel)]="telephone2" required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="n-siret-tuteur">N° Siret (Entreprise):</label>
+                        <input type="text" id="n-siret-tuteur" name="n_siret_tuteur"   [(ngModel)]="nSiretTuteur" required maxlength="20">
+                    </div>
+                   
+                </fieldset>
+                <div>
+                    <input type="submit" (click)="saveTuteur()" value="Envoyer Tuteur">
+                </div>
+            </form>
+    
+            <!--    Stage form -->
+            <form method="get" action="SubmitStage.html" class="hidden"    id="stage">
+                <fieldset>
+                    <legend>Stage</legend>
+                    <div class="NiceInput">
+                        <label for="num-stage">Numéro de Stage:</label>
+                        <input type="text" id="num-stage" name="num_stage"   [(ngModel)]="numStage" required maxlength="20">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="compte-rendu">Compte Rendu:</label>
+                        <input type="text" id="compte-rendu" name="compte_rendu"   [(ngModel)]="compteRendu" maxlength="20">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="num-prof">Numéro Professeur:</label>
+                        <input type="text" id="num-prof" name="num_prof"   [(ngModel)]="numProf"  required maxlength="20">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="code-etudiant">Code Étudiant:</label>
+                        <input type="text" id="code-etudiant" name="code_etudiant"   [(ngModel)]="codeEtudiant" required maxlength="50">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="num-tuteur-stage">Numéro Tuteur:</label>
+                        <input type="text" id="num-tuteur-stage" name="num_tuteur"   [(ngModel)]="numTuteurStage" required maxlength="10">
+                    </div>
+                    <div class="NiceInput">
+                        <label for="n-siret-stage">N° Siret (Entreprise):</label>
+                        <input type="text" id="n-siret-stage" name="n_siret"   [(ngModel)]="nSiretStage"  required maxlength="20">
+                    </div>
 
+                    <div class="NiceInput">
+                        <label for="code-type">Code Type:</label>
+                        <input type="text" id="code-type" name="code_type"   [(ngModel)]="codeType" required maxlength="10">
+                    </div>
+                    
+                    <div class="NiceInput">
+                        <label for="annee-stage">Année:</label>
+                        <input type="text" id="annee-stage" name="annee"   [(ngModel)]="anneeStage" required maxlength="4">
+                    </div>
+                  
+                </fieldset>
+                <div>
+                    <input type="submit" (click)="saveStage()"value="Envoyer Stage">
+                </div>
+            </form>
+    
+            
+    
+        </div>
+    </div>
+    
             
 

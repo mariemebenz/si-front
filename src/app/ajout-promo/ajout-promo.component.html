@@ -3,29 +3,28 @@
 </head>
 
 
-
-    <div class="container" style=" margin-left: 14cm;
-    margin-top: -6cm;">
-        <h2>Ajouter une Promotion</h2>
-  <form id="addTeacherForm">
-    <div class="form-group">
-      <label for="anneepromo">Année Promotion</label>
-      <input type="text" id="anneepromo" name="anneepromo" required>
-    </div>
-    <div class="form-group">
-      <label for="nb-inscrit">Nombre Inscrits</label>
-      <input type="text" id="nb-inscrit" name="nb-inscrit" required>
-    </div>
-    <div class="form-group">
-      <label for="nb-reçus">Nombres Reçus</label>
-      <input type="text" id="nb-reçus" name="nb-reçus" required>
-    </div>
-    <div class="form-group">
-      <label for="num-prof">Numero Professeur</label>
-      <input type="text" id="num-prof" name="num-prof" required>
-    </div>
-    <div class="form-group">
-        <button type="submit">Ajouter la promotion</button>
+<div class="container" style="margin-left: 14cm; margin-top: -6cm;">
+  <h2>Ajouter une Promotion</h2>
+  <form id="addPromotionForm">
+      <div class="form-group">
+          <label for="anneePromo">Année Promotion</label>
+          <input type="text" id="anneePromo" name="anneePromo" [(ngModel)]="anneePromo" required>
+      </div>
+      <div class="form-group">
+          <label for="nombreInscrits">Nombre Inscrits</label>
+          <input type="number" id="nombreInscrits" name="nombreInscrits" [(ngModel)]="nombreInscrits" required>
+      </div>
+      <div class="form-group">
+          <label for="nombreRecus">Nombre Reçus</label>
+          <input type="number" id="nombreRecus" name="nombreRecus" [(ngModel)]="nombreRecus" required>
+      </div>
+      <div class="form-group">
+          <label for="numeroProfesseur">Numéro Professeur</label>
+          <input type="text" id="numeroProfesseur" name="numeroProfesseur" [(ngModel)]="numeroProfesseur" required>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-outline-success" (click)="savePromo()"><i class="fa fa-check" aria-hidden="true"></i><label>Enregistrer </label></button>
+    
       </div>
   </form>
 </div>

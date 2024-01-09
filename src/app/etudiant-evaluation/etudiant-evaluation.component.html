@@ -5,67 +5,24 @@
 </head>
 
 
-<div class="container-layout">
-    <div class="content-area">
-      <aside class="sidebar-area" role="complementary">
-          <nav class="side-navigation" role="navigation">
-             <ul class="menu">
-               <li class="menu-item">
-                   <a href="etudiant/remplir-fiche">Profil & Paramètres</a>
-               </li><!-- /.menu-item -->
-               <li class="menu-item">
-                   <a href="etudiant/remplir-fiche">Fiche de Stage</a>
-               </li><!-- /.menu-item -->
-                  <li class="menu-item">
-                      <a href="">Dépôt de Stage</a>
-                  </li><!-- /.menu-item -->
-              
-                  <li class="menu-item">
-                   <a href="admin/evaluer-etudiant"> Évaluation de Stage</a>
-               </li><!-- /.menu-item -->
-  
-              
-             </ul><!-- /.menu -->
-          </nav><!-- #site-navigation -->
-          <div class="container-fluid">
-  
-             <router-outlet></router-outlet>
-         </div>
-      </aside><!-- #secondary -->
-     
-    </div><!-- /.content-area -->
-
 
    <section class="main_content" >
 
 
     <div class="container-wrap">
-    <div class="container">
-        <h1>Validation stage</h1>
-
-        <div class="evaluation-container">
-            <h2>Statut du Stage</h2>
-            <p id="stage-status">Validé / Refusé</p>
-            <p>Commentaire de l'encadrant :</p>
-            <textarea id="prof-comment" disabled> commentaire ici...</textarea>
-        </div>
-
-       
-    </div>
-
+    
     <div class="container">
         <h1>Évaluation de Stage</h1>
 
        
         <div class="evaluation-container">
             <h2>Note de Stage</h2>
-            <p id="stage-grade">XX / 20</p>
+            <p id="stage-grade" ></p>
             <p>Commentaire sur la note :</p>
-            <textarea id="grade-comment" disabled> commentaire ici...</textarea>
+            <textarea id="grade-comment" disabled> </textarea>
         </div>
     </div>
 
 </div>
 
 </section>
-</div>

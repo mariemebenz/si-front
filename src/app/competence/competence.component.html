@@ -1,71 +1,111 @@
-<!DOCTYPE html>
-<html>
+
 <head>
   
 <style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin-left: 0.79cm;
-}
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgb(197, 219, 240);
-  color: white;
-}
 </style>
 </head>
-<body>
 
 
 
-<table id="customers">
+
+  <section class="main_content" style="margin-left: 10cm; ">
+    <h2 class="titre" >Ajouter Compétance</h2>
+    <div class="landing-page">
+        <div class="form-appointment">
+            <div class="wpcf7" id="wpcf7-f560-p590-o1">
+                <form method="get" action="DynamicForm.html">
+                    <fieldset>
+                       
+                        <div id="enfants" class="hidden">
+                            <fieldset>
+                                <legend>Compétence :</legend>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <td>Code</td>
+                                            <td>Libellé</td>
+                                            <td>Description</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Compétance n°1</td>
+                                            <td><input type="text" name="code-e1" [(ngModel)]="codeComp"></td>
+                                            <td><input type="text" name="libelle-e1" [(ngModel)]="libelle"></td>
+                                            <td><input type="text" name="description-e1"[(ngModel)]="description"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    <button type="button" id="add">Ajouter une compétence</button>
+                                </p>
+                            </fieldset>
+                        </div>
+                        <div>
+                            <p>
+                                <input type="submit" id="submit"  (click)="saveComp()" value="Envoyer">
+                                <input type="reset" value="Annuler">
+                            </p>
+                        </div> 
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+  function ActiverEnfants() {
+      document.getElementById("enfants").classList.toggle("hidden");
+  }
   
-    <tr>
-     
-     
-        <th>Code</th>
-        <th>Libellé</th>
-        <th>Description</th>
-        
-    
-     
-      </tr>
-<tr>
- 
-    <td><input type="text"  name="Code"></td>
-    <td><input type="text"  name="Libellé"></td>
-    <td><input type="text"     name="Description" ></td>
-   
-     
-<!--</tr>
-
-<tr *ngFor="let ligne of tab">
-  <td><input type="text" [(ngModel)]="ligne.name" name="name"></td>
-  <td><input type="text" [(ngModel)]="ligne.pname" name="pname"></td>
-  <td><input type="text" [(ngModel)]="ligne.email" name="email"></td>
-
-  <td hidden><input type="text" [(ngModel)]="ligne.pass" name="cne"></td>
+  var comp_count = 2;
+  function AjoutEnfant() {
+      var codeComp = document.querySelector("[name='code-e" + (comp_count - 1) + "']").value;
+      var LibelleComp = document.querySelector("[name='libelle-e" + (comp_count - 1) + "']").value;
+      var descriptionComp = document.querySelector("[name='description-e" + (comp_count - 1) + "']").value;
+      if (codeComp.length > 0 && LibelleComp.length > 0 && descriptionComp.length > 0) {
+          var tr = document.createElement("tr");
+          var td1 = document.createElement("td");
+          tr.appendChild(td1);
+          td1.appendChild(document.createTextNode("Compétance n°" + comp_count));
+          var td2 = document.createElement("td");
+          tr.appendChild(td2);
+          var input1 = document.createElement("input");
+          input1.type = "text";
+          input1.name = "code-e" + comp_count;
+          td2.appendChild(input1);
+          var td3 = document.createElement("td");
+          tr.appendChild(td3);
+          var input2 = document.createElement("input");
+          input2.type = "text";
+          input2.name = "libelle-e" + comp_count;
+          td3.appendChild(input2);
+          var td4 = document.createElement("td");
+          tr.appendChild(td4);
+          var input3 = document.createElement("input");
+          input3.type = "text";
+          input3.name = "description-e" + comp_count;
+          td4.appendChild(input3);
   
+          var table_enfants = document.querySelector("#enfants tbody");
+          table_enfants.appendChild(tr);
+  
+          comp_count++;
+      } else {
+          alert("Veuillez remplir les informations des autres compétances d'abord");
+      }
+  }
+  
+  var boutonAjoutEnfant = document.getElementById("add");
+  boutonAjoutEnfant.addEventListener("click", AjoutEnfant);
+  
+  var boutonEnvoyer = document.querySelector("[id=submit]");
+  boutonEnvoyer.addEventListener("click", VerifMail);
+  
+  document.querySelector("#enfants tbody tr").deleteRow(-1);
+  </script>
 
 
-</tr>-->
-</table>
-
-<button type="button" class="btn btn-outline-dark"  ><i class="fa fa-plus" aria-hidden="true"></i></button>
-
-</body>
-</html>

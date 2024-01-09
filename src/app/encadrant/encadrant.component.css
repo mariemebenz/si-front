@@ -12,7 +12,15 @@ html {
     }
   
   }
-  
+  body {
+
+ min-height: 100vh;
+ background-color: #d4e8f0; /* Pastel Blue */
+}
+
+.site-header.scrolled {
+ background-color: #000080; /* Dark Blue */
+}
   .site-header,
   .site-footer {
       display: flex;
@@ -21,9 +29,8 @@ html {
   }
   
   .site-header {
-    height: 100px;
-    background-color: #e7eaed;
-  }
+     background-color: #000080; /* Dark Blue */
+}
   
   .site-footer {
       background-color: #333536;
@@ -41,19 +48,16 @@ html {
       }
   
   .sidebar-area {
-      background-color: rgb(16, 28, 97);
+      background-color: #000080;
       position: relative;
       width: 300px;
-      height:20cm;
+      min-height: 100vh;
+      
   }
   
   .side-navigation {
   
-      &.fixed {
-          position: fixed;
-          top: 0;
-          width: 290px;
-      }
+   
   
       &.bottom {
           position: absolute;
@@ -78,7 +82,7 @@ html {
                   left: 0;
                   bottom: 0;
                   width: 0;
-                  background-color: #a5bdde;
+                  background-color: #b6d0e3;
                   transition: width .3s ease-in;
               }
   
@@ -89,13 +93,28 @@ html {
               }
   
               a {
-                font-size: 25px;
-                color: #fff;
-                text-decoration: none;
-                position: relative;
-                display: block;
-                padding: 30px 80px;
-                margin-bottom: 20px; /* Increase this value to add more space between menu items */
+                  color: #fff;
+                  text-decoration: none;
+                  position: relative;
+                  display: block;
+                  padding: 18px 50px;
               }
           }
   }
+
+
+  .sidebar-area {
+   background-color: #12125a;
+   width: 300px;
+}
+
+.side-navigation {
+   position: fixed;
+   top: 0;
+   width: 290px; /* Slightly less than the sidebar-area to account for any scrollbar */
+   height: 100vh; /* Full height of the viewport */
+   overflow-y: auto; /* Allow scrolling inside the sidebar if content is long */
+}
+
+  
+   

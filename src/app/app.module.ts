@@ -33,6 +33,11 @@ import { EtudiantEvaluationComponent } from './etudiant-evaluation/etudiant-eval
 import { ChoisirTypeComponent } from './choisir-type/choisir-type.component';
 import { AjoutPromoComponent } from './ajout-promo/ajout-promo.component';
 import { EncadrantComponent } from './encadrant/encadrant.component';
+import { ChoisirEtudiantComponent } from './choisir-etudiant/choisir-etudiant.component';
+import { ConsulterEtudiantComponent } from './consulter-etudiant/consulter-etudiant.component';
+import { DepotFicheComponent } from './depot-fiche/depot-fiche.component';
+import { ChoisirEtudiantEvaluerComponent } from './choisir-etudiant-evaluer/choisir-etudiant-evaluer.component';
+import { ResponsableComponent } from './responsable/responsable.component';
 
 
 
@@ -61,6 +66,11 @@ import { EncadrantComponent } from './encadrant/encadrant.component';
     ChoisirTypeComponent,
     AjoutPromoComponent,
     EncadrantComponent,
+    ChoisirEtudiantComponent,
+    ConsulterEtudiantComponent,
+    DepotFicheComponent,
+    ChoisirEtudiantEvaluerComponent,
+    ResponsableComponent,
    
   ],
   imports: [

@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  * {
+  
+    &,
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  
+  }
+  body {
+
+ min-height: 100vh;
+ background-color: #d4e8f0; /* Pastel Blue */
+}
+
+.site-header.scrolled {
+ background-color: #000080; /* Dark Blue */
+}
+  .site-header,
+  .site-footer {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+  }
+  
+  .site-header {
+     background-color: #000080; /* Dark Blue */
+}
+  
+  .site-footer {
+      background-color: #333536;
+      height: 200px;
+      color: #fff;
+  }
+  
+  
+  .content-area {
+      display: flex;
+  }
+      
+      .site-main {
+          width: 75%;
+      }
+  
+  .sidebar-area {
+      background-color: #000080;
+      position: relative;
+      width: 300px;
+      min-height: 100vh;
+      
+  }
+  
+  .side-navigation {
+  
+   
+  
+      &.bottom {
+          position: absolute;
+          bottom: 0;
+          top: auto;
+          width: 290px;
+      }
+  
+      .menu {
+          padding-top: 15px;
+          list-style-type: none;
+      }
+  
+          .menu-item {
+              position: relative;
+  
+  
+              &:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  width: 0;
+                 
+                  background-color: #d4e8f0;
+                  transition: width .3s ease-in;
+              }
+  
+              &:hover {
+                  &:before {
+                      width: 100%;
+                  }
+
+                  a{
+                    color: #12125a;
+                  }
+              }
+  
+              a {
+                  color: #fff;
+                  text-decoration: none;
+                  position: relative;
+                  display: block;
+                  padding: 18px 50px;
+              }
+          }
+  }
+
+
+  .sidebar-area {
+   background-color: #12125a;
+   width: 300px;
+}
+
+.side-navigation {
+   position: fixed;
+   top: 0;
+   width: 290px; /* Slightly less than the sidebar-area to account for any scrollbar */
+   height: 100vh; /* Full height of the viewport */
+   overflow-y: auto; /* Allow scrolling inside the sidebar if content is long */
+}
+
+  
+   

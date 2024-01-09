@@ -1,6 +1,12 @@
 export interface Etudiant {
-    id: number;
-    nom:string;
-    prenom:string;
-    promotion:string;
+    codeEtudiant: string;
+    nom: string;
+    prenom: string;
+    ville: string;
+    date_n: Date;
+    adresse: string;
+    mention: string;
+    tel: string;
+    anneePromo: string;
+
 }

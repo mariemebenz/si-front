@@ -5,15 +5,14 @@
 
 
   .titre {
-    font-size: 50px; /* Adjust the font size to your preference */
+    font-size: 50px;
     color: rgb(7, 26, 61);
     font-weight: bold;
-    
-    font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with your desired font */
-    /* Add any other styles you want */
-  }
-
-
+    margin-left: 200px;
+    margin-bottom: -50px;
+   width: 500px;
+   
+}
 
 
 
@@ -21,26 +20,13 @@
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color:     #a5bdde ;/*#add8e6;*/ /* Bleu pastel */
     color: #333333;
    
- 
+    margin-left:12cm;
+    margin-top: 2cm;
    
 }
 
@@ -64,7 +50,7 @@ body {
   }
   
   .landing-page .module {
-      border: 1px solid rgb(219, 219, 219);
+      border: 1px solid #B0C4DE;
       border-radius: 4px;
       float: left;
       padding: 2em;
@@ -91,18 +77,21 @@ body {
   }
   
   .form-appointment {
-      padding: 2em;
-      background-color: rgb(238, 239, 242);
-      border-radius: 4px;
-      border: 1px solid rgb(16, 28, 97);
-      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
-      font-family: 'PT Sans', Arial, sans-serif;
-      margin: 20px auto;
-  }
+    padding: 2em;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+    border: 1px solid rgb(16, 28, 97);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    font-family: 'PT Sans', Arial, sans-serif;
+    margin: 20px auto;
+    width: auto; /* Adjust width as needed */
+}
+
   
   .form-appointment input[type=text],
   .form-appointment input[type=email],
   .form-appointment input[type=tel],
+  .form-appointment input[type=number],
   .form-appointment textarea {	
       border: 1px solid rgb(7, 26, 61);
       border-radius: .2em;	
@@ -130,6 +119,8 @@ body {
   .form-appointment input[type=email]:focus,
   .form-appointment input[type=tel]:active,
   .form-appointment input[type=tel]:focus,
+  .form-appointment input[type=number]:active,
+  .form-appointment input[type=number]:focus,
   .form-appointment textarea:active,
   .form-appointment textarea:focus {	
     outline: 0;
@@ -141,23 +132,29 @@ body {
   }
   
   .form-appointment input[type=submit] {
-      background-color: #003366;
-      border: 1px solid rgb(7, 20, 58);
-      border-radius: 4px;
-      color: rgb(255, 255, 255);
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 1.4em;
-      padding: 10px 18px;
+    background-color: #003366; /* Dark blue background for the button */
+    color: #ffffff; /* White text for the button */
+    padding: 8px 12px; /* Smaller padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em; /* Smaller font size */
+    width: auto; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    transition: background-color 0.3s ease;
   }
   
   .form-appointment input[type=submit]:hover {
-      background-color: white;
+      background-color: #c5d4ea;
       color: #160c44;
       font-weight: 800px;
   }
   
   
+ 
+.submit-button:hover {
+    background-color: #012a4a; /* Slightly darker blue on hover */
+}
   #entreprise .NiceInput {
       
     display: flex;
@@ -228,14 +225,10 @@ body {
   
   
   legend {
-    font-family: Arial, sans-serif; /* Choose an appropriate font family */
-    font-size: 1.5rem; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the text bold, if desired */
+    font-size: 2em; /* Increased font size */
     color: #160c44;
-     /* Text color */
-    /* You can add other text-related styles here */
-  }
-  
+    margin-bottom: 10px; /* Added margin for spacing */
+}
   
   
   
@@ -248,86 +241,11 @@ body {
       margin-left: -.02em;
   }
   
+  input[type=submit] {
+    font-size: 0.3em; /* Smaller text size */
+    padding: 5px 6px; /* Smaller padding */
+}
   
   
   
   
-  
-
-
-.upload-container {
-    margin-top: 35px;
-    background-color: #ffffff;
-    border: 3px solid #003366; /* Bleu foncé */
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    width: 500px;
-    margin-bottom: 25px;
-}
-
-.upload-container h2 {
-    color: #003366; /* Bleu foncé */
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.upload-container p {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.file-upload-wrapper {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.input-file {
-    position: absolute;
-    font-size: 100px;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-
-
-
-.file-upload-wrapper label {
-    background-color: #003366; /* Bleu foncé */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-#file-name {
-    margin-left: 10px;
-    font-style: italic;
-}
-
-.submit-button {
-    background-color: #003366; /* Bleu foncé */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.submit-button:hover {
-    background-color: #add8e6;
-    color: rgb(3, 3, 38); /* Une teinte plus foncée de bleu */
-}
-
-
-.container-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the containers */
-    width: 100%; /* Takes full width of the body */
-}

@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="depot-fiche.component.css" type="text/css">
+</head>
+
+
+
+<div class="container-wrapper">
+    <div class="upload-container">
+        <h2>Déposez votre fiche de stage</h2>
+        <p>Veuillez télécharger votre fichier au format PDF.</p>
+        <form action="/submit-stage" method="post" enctype="multipart/form-data">
+            <div class="file-upload-wrapper">
+                <input type="file" name="ficheStage" id="input-file" class="input-file" accept=".pdf" required>
+                <label for="input-file">Choisir un fichier</label>
+                <span id="file-name">Aucun fichier choisi</span>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+document.getElementById('input-file').addEventListener('change', function() {
+document.getElementById('file-name').textContent = this.files[0].name;
+});
+</script>

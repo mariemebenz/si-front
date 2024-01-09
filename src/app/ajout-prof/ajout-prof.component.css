@@ -1,32 +1,25 @@
 
 
-
-
-
-
-
-
- 
-
-
-
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f6fc;
     color: #333;
-  
+   
+   
   }
+
+
   .container {
+   
     width: 600px;
-    margin: 50px auto;
+     margin: 50px auto;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   h2 {
-    color: #0366d6;
+    color: #000080;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -40,7 +33,7 @@ body {
   label {
     margin-bottom: 5px;
     font-weight: bold;
-    color: #0366d6;
+    color: #000080;
   }
   input, select {
     width: 100%;
@@ -49,7 +42,7 @@ body {
     border-radius: 4px;
   }
   .form-group button {
-    background-color: #0366d6;
+    background-color: #000080;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -58,6 +51,5 @@ body {
     transition: background-color 0.3s;
   }
   .form-group button:hover {
-    background-color: #024b91;
+    background-color: #000080;
   }
-
